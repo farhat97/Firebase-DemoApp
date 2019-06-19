@@ -31,7 +31,7 @@ namespace Web_Service_Demo_App
         private void InitializeComponent()
         {
             this.titleLabel = new System.Windows.Forms.Label();
-            this.nameText = new System.Windows.Forms.TextBox();
+            this.dateText = new System.Windows.Forms.TextBox();
             this.idText = new System.Windows.Forms.TextBox();
             this.startTimeText = new System.Windows.Forms.TextBox();
             this.endTimeText = new System.Windows.Forms.TextBox();
@@ -42,7 +42,7 @@ namespace Web_Service_Demo_App
             this.clearButton = new System.Windows.Forms.Button();
             this.insertButton = new System.Windows.Forms.Button();
             this.dateTextLabel = new System.Windows.Forms.Label();
-            this.dateText = new System.Windows.Forms.TextBox();
+            this.nameText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -55,20 +55,20 @@ namespace Web_Service_Demo_App
             this.titleLabel.Text = "Shift Manager";
             this.titleLabel.Click += new System.EventHandler(this.titleLabel_Click);
             // 
-            // nameText
+            // dateText
             // 
-            this.nameText.Location = new System.Drawing.Point(173, 125);
-            this.nameText.Name = "nameText";
-            this.nameText.Size = new System.Drawing.Size(196, 20);
-            this.nameText.TabIndex = 1;
-            this.nameText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.dateText.Location = new System.Drawing.Point(173, 176);
+            this.dateText.Name = "dateText";
+            this.dateText.Size = new System.Drawing.Size(196, 20);
+            this.dateText.TabIndex = 3;
+            this.dateText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // idText
             // 
-            this.idText.Location = new System.Drawing.Point(173, 178);
+            this.idText.Location = new System.Drawing.Point(173, 80);
             this.idText.Name = "idText";
             this.idText.Size = new System.Drawing.Size(196, 20);
-            this.idText.TabIndex = 3;
+            this.idText.TabIndex = 1;
             this.idText.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
             // 
             // startTimeText
@@ -98,7 +98,7 @@ namespace Web_Service_Demo_App
             // idLabel
             // 
             this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(63, 181);
+            this.idLabel.Location = new System.Drawing.Point(63, 83);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(74, 13);
             this.idLabel.TabIndex = 7;
@@ -128,7 +128,7 @@ namespace Web_Service_Demo_App
             this.clearButton.Location = new System.Drawing.Point(173, 330);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 23);
-            this.clearButton.TabIndex = 10;
+            this.clearButton.TabIndex = 6;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
@@ -138,7 +138,7 @@ namespace Web_Service_Demo_App
             this.insertButton.Location = new System.Drawing.Point(294, 330);
             this.insertButton.Name = "insertButton";
             this.insertButton.Size = new System.Drawing.Size(75, 23);
-            this.insertButton.TabIndex = 11;
+            this.insertButton.TabIndex = 7;
             this.insertButton.Text = "Insert";
             this.insertButton.UseVisualStyleBackColor = true;
             this.insertButton.Click += new System.EventHandler(this.insertButton_Click);
@@ -146,25 +146,25 @@ namespace Web_Service_Demo_App
             // dateTextLabel
             // 
             this.dateTextLabel.AutoSize = true;
-            this.dateTextLabel.Location = new System.Drawing.Point(63, 81);
+            this.dateTextLabel.Location = new System.Drawing.Point(63, 179);
             this.dateTextLabel.Name = "dateTextLabel";
             this.dateTextLabel.Size = new System.Drawing.Size(30, 13);
             this.dateTextLabel.TabIndex = 12;
             this.dateTextLabel.Text = "Date";
             // 
-            // dateText
+            // nameText
             // 
-            this.dateText.Location = new System.Drawing.Point(173, 78);
-            this.dateText.Name = "dateText";
-            this.dateText.Size = new System.Drawing.Size(196, 20);
-            this.dateText.TabIndex = 13;
+            this.nameText.Location = new System.Drawing.Point(173, 125);
+            this.nameText.Name = "nameText";
+            this.nameText.Size = new System.Drawing.Size(196, 20);
+            this.nameText.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 426);
-            this.Controls.Add(this.dateText);
+            this.Controls.Add(this.nameText);
             this.Controls.Add(this.dateTextLabel);
             this.Controls.Add(this.insertButton);
             this.Controls.Add(this.clearButton);
@@ -175,11 +175,11 @@ namespace Web_Service_Demo_App
             this.Controls.Add(this.endTimeText);
             this.Controls.Add(this.startTimeText);
             this.Controls.Add(this.idText);
-            this.Controls.Add(this.nameText);
+            this.Controls.Add(this.dateText);
             this.Controls.Add(this.titleLabel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Employee\'s Name";
+            this.Text = "7";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,7 +199,7 @@ namespace Web_Service_Demo_App
         #endregion
 
         private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.TextBox nameText;
+        private System.Windows.Forms.TextBox dateText;
         private System.Windows.Forms.TextBox idText;
         private System.Windows.Forms.TextBox startTimeText;
         private System.Windows.Forms.TextBox endTimeText;
@@ -210,7 +210,7 @@ namespace Web_Service_Demo_App
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button insertButton;
         private System.Windows.Forms.Label dateTextLabel;
-        private System.Windows.Forms.TextBox dateText;
+        private System.Windows.Forms.TextBox nameText;
     }
 }
 

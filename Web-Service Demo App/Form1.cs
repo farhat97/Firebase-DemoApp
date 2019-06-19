@@ -73,14 +73,14 @@ namespace Web_Service_Demo_App
         {
             var shiftData = new ShiftData
             {
-                Date = dateText.Text,
-                Name = nameText.Text,
                 Id = idText.Text,
+                Name = nameText.Text,
+                Date = dateText.Text,
                 startTime = startTimeText.Text,
                 endTime = endTimeText.Text
             };
 
-            SetResponse response = await client.SetTaskAsync("EmployeeShifts", shiftData);
+            SetResponse response = await client.SetTaskAsync("EmployeeShifts/" + idText.Text, shiftData);
             ShiftData result = response.ResultAs<ShiftData>();
 
             MessageBox.Show("Shift inserted for " + result.Name);
