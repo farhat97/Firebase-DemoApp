@@ -2,6 +2,7 @@
 {
     internal class ShiftData
     {
+        public string Date { get; set; }
         public string Name { get; set; }
         public string Id { get; set; }
         public string startTime { get; set; }

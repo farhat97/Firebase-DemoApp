@@ -41,6 +41,8 @@ namespace Web_Service_Demo_App
             this.endTimeLabel = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
             this.insertButton = new System.Windows.Forms.Button();
+            this.dateTextLabel = new System.Windows.Forms.Label();
+            this.dateText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -55,7 +57,7 @@ namespace Web_Service_Demo_App
             // 
             // nameText
             // 
-            this.nameText.Location = new System.Drawing.Point(171, 109);
+            this.nameText.Location = new System.Drawing.Point(173, 125);
             this.nameText.Name = "nameText";
             this.nameText.Size = new System.Drawing.Size(196, 20);
             this.nameText.TabIndex = 1;
@@ -63,7 +65,7 @@ namespace Web_Service_Demo_App
             // 
             // idText
             // 
-            this.idText.Location = new System.Drawing.Point(171, 162);
+            this.idText.Location = new System.Drawing.Point(173, 178);
             this.idText.Name = "idText";
             this.idText.Size = new System.Drawing.Size(196, 20);
             this.idText.TabIndex = 3;
@@ -71,14 +73,14 @@ namespace Web_Service_Demo_App
             // 
             // startTimeText
             // 
-            this.startTimeText.Location = new System.Drawing.Point(171, 211);
+            this.startTimeText.Location = new System.Drawing.Point(173, 227);
             this.startTimeText.Name = "startTimeText";
             this.startTimeText.Size = new System.Drawing.Size(196, 20);
             this.startTimeText.TabIndex = 4;
             // 
             // endTimeText
             // 
-            this.endTimeText.Location = new System.Drawing.Point(171, 261);
+            this.endTimeText.Location = new System.Drawing.Point(173, 277);
             this.endTimeText.Name = "endTimeText";
             this.endTimeText.Size = new System.Drawing.Size(196, 20);
             this.endTimeText.TabIndex = 5;
@@ -86,7 +88,7 @@ namespace Web_Service_Demo_App
             // employeeNameLabel
             // 
             this.employeeNameLabel.AutoSize = true;
-            this.employeeNameLabel.Location = new System.Drawing.Point(61, 112);
+            this.employeeNameLabel.Location = new System.Drawing.Point(63, 128);
             this.employeeNameLabel.Name = "employeeNameLabel";
             this.employeeNameLabel.Size = new System.Drawing.Size(91, 13);
             this.employeeNameLabel.TabIndex = 6;
@@ -96,7 +98,7 @@ namespace Web_Service_Demo_App
             // idLabel
             // 
             this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(61, 165);
+            this.idLabel.Location = new System.Drawing.Point(63, 181);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(74, 13);
             this.idLabel.TabIndex = 7;
@@ -105,7 +107,7 @@ namespace Web_Service_Demo_App
             // startTimeLabel
             // 
             this.startTimeLabel.AutoSize = true;
-            this.startTimeLabel.Location = new System.Drawing.Point(61, 214);
+            this.startTimeLabel.Location = new System.Drawing.Point(63, 230);
             this.startTimeLabel.Name = "startTimeLabel";
             this.startTimeLabel.Size = new System.Drawing.Size(55, 13);
             this.startTimeLabel.TabIndex = 8;
@@ -114,7 +116,7 @@ namespace Web_Service_Demo_App
             // endTimeLabel
             // 
             this.endTimeLabel.AutoSize = true;
-            this.endTimeLabel.Location = new System.Drawing.Point(61, 264);
+            this.endTimeLabel.Location = new System.Drawing.Point(63, 280);
             this.endTimeLabel.Name = "endTimeLabel";
             this.endTimeLabel.Size = new System.Drawing.Size(52, 13);
             this.endTimeLabel.TabIndex = 9;
@@ -123,7 +125,7 @@ namespace Web_Service_Demo_App
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(171, 314);
+            this.clearButton.Location = new System.Drawing.Point(173, 330);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 23);
             this.clearButton.TabIndex = 10;
@@ -133,7 +135,7 @@ namespace Web_Service_Demo_App
             // 
             // insertButton
             // 
-            this.insertButton.Location = new System.Drawing.Point(292, 314);
+            this.insertButton.Location = new System.Drawing.Point(294, 330);
             this.insertButton.Name = "insertButton";
             this.insertButton.Size = new System.Drawing.Size(75, 23);
             this.insertButton.TabIndex = 11;
@@ -141,11 +143,29 @@ namespace Web_Service_Demo_App
             this.insertButton.UseVisualStyleBackColor = true;
             this.insertButton.Click += new System.EventHandler(this.insertButton_Click);
             // 
+            // dateTextLabel
+            // 
+            this.dateTextLabel.AutoSize = true;
+            this.dateTextLabel.Location = new System.Drawing.Point(63, 81);
+            this.dateTextLabel.Name = "dateTextLabel";
+            this.dateTextLabel.Size = new System.Drawing.Size(30, 13);
+            this.dateTextLabel.TabIndex = 12;
+            this.dateTextLabel.Text = "Date";
+            // 
+            // dateText
+            // 
+            this.dateText.Location = new System.Drawing.Point(173, 78);
+            this.dateText.Name = "dateText";
+            this.dateText.Size = new System.Drawing.Size(196, 20);
+            this.dateText.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 426);
+            this.Controls.Add(this.dateText);
+            this.Controls.Add(this.dateTextLabel);
             this.Controls.Add(this.insertButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.endTimeLabel);
@@ -189,6 +209,8 @@ namespace Web_Service_Demo_App
         private System.Windows.Forms.Label endTimeLabel;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button insertButton;
+        private System.Windows.Forms.Label dateTextLabel;
+        private System.Windows.Forms.TextBox dateText;
     }
 }
 

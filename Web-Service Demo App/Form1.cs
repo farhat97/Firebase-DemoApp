@@ -73,6 +73,7 @@ namespace Web_Service_Demo_App
         {
             var shiftData = new ShiftData
             {
+                Date = dateText.Text,
                 Name = nameText.Text,
                 Id = idText.Text,
                 startTime = startTimeText.Text,
