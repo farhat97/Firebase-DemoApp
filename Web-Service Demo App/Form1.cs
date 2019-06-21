@@ -19,8 +19,11 @@ namespace Web_Service_Demo_App
         public Form1()
         {
             InitializeComponent();
+
+            this.Load += Form1_Load;
         }
 
+        #region FirebaseConnection
         IFirebaseConfig config = new FirebaseConfig
         {
             AuthSecret = "jv77QY23T89MK7GJw0QVHRi4WK1dwZmQyKUVzkri",
@@ -33,12 +36,19 @@ namespace Web_Service_Demo_App
         {
             client = new FireSharp.FirebaseClient(config);
 
-            /*if(client != null)
+            if (client != null)
             {
                 MessageBox.Show("Connection Successful"); // remove later
-            }*/
+                EnterHoursControl.Instance.firebaseClient = client;
+            }
+            else
+                MessageBox.Show("Error in connection");
         }
+        #endregion
 
+        
+
+        #region GeneratedClicks
         private void titleLabel_Click(object sender, EventArgs e)
         {
 
@@ -68,22 +78,38 @@ namespace Web_Service_Demo_App
         {
 
         }
+        #endregion
 
-        private async void insertButton_Click(object sender, EventArgs e)
+        // main buttons
+
+        private void enterHrsBtn_Click(object sender, EventArgs e)
         {
-            var shiftData = new ShiftData
+            if (!panel.Controls.Contains(EnterHoursControl.Instance))
             {
-                Id = idText.Text,
-                Name = nameText.Text,
-                Date = dateText.Text,
-                startTime = startTimeText.Text,
-                endTime = endTimeText.Text
-            };
+                panel.Controls.Add(EnterHoursControl.Instance);
+                EnterHoursControl.Instance.Dock = DockStyle.Fill;
+                EnterHoursControl.Instance.BringToFront();
+            }
+            else
+                EnterHoursControl.Instance.BringToFront();
 
-            SetResponse response = await client.SetTaskAsync("EmployeeShifts/" + idText.Text, shiftData);
-            ShiftData result = response.ResultAs<ShiftData>();
+            // send client to HoursControl
+            //EnterHoursControl.Instance.firebaseClient = client;
 
-            MessageBox.Show("Shift inserted for " + result.Name);
+            panel.BringToFront();
+        }
+
+        public IFirebaseClient GetFirebaseClient()
+        {
+            if (client != null)
+                return client;
+            else
+                return null;
+        }
+
+        private void retrieveHrsBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
