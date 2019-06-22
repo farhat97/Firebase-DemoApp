@@ -109,7 +109,16 @@ namespace Web_Service_Demo_App
 
         private void retrieveHrsBtn_Click(object sender, EventArgs e)
         {
+            if (!panel.Controls.Contains(RetrieveHoursControl.Instance))
+            {
+                panel.Controls.Add(RetrieveHoursControl.Instance);
+                RetrieveHoursControl.Instance.Dock = DockStyle.Fill;
+                RetrieveHoursControl.Instance.BringToFront();
+            }
+            else
+                RetrieveHoursControl.Instance.BringToFront();
 
+            panel.BringToFront();
         }
     }
 }
