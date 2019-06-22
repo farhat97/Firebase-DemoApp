@@ -46,8 +46,6 @@ namespace Web_Service_Demo_App
         }
         #endregion
 
-        
-
         #region GeneratedClicks
         private void titleLabel_Click(object sender, EventArgs e)
         {
