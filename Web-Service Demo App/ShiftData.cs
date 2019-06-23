@@ -1,11 +1,23 @@
 ﻿namespace Web_Service_Demo_App
 {
-    internal class ShiftData
+    public class ShiftData
     {
-        public string Id { get; set; }
-        public string Date { get; set; }
-        public string Name { get; set; }
-        public string startTime { get; set; }
-        public string endTime { get; set; }
+        //public string Id;
+        //public string Date;
+        //public string Name; //{ get; set; }
+        //public string startTime;
+        //public string endTime;
+
+        private string date;
+        private string id;
+        private string name;
+        private string endTime;
+        private string startTime;
+
+        public string Date { get => date; set => date = value; }
+        public string Id { get => id; set => id = value; }
+        public string Name { get => name; set => name = value; }
+        public string EndTime { get => endTime; set => endTime = value; }
+        public string StartTime { get => startTime; set => startTime = value; }
     }
 }

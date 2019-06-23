@@ -48,8 +48,8 @@ namespace Web_Service_Demo_App
                 Id = idText.Text,
                 Name = nameText.Text,
                 Date = dateText.Text,
-                startTime = startTimeText.Text,
-                endTime = endTimeText.Text
+                StartTime = startTimeText.Text,
+                EndTime = endTimeText.Text
             };
 
             if (firebaseClient != null)
